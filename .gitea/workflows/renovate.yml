@@ -14,9 +14,8 @@ jobs:
       - uses: https://github.com/actions/checkout@v3
       - name: Install libs
         run: apt-get update && apt-get install -y sudo lsb-release systemd docker.io
-      # - uses: docker-practice/actions-setup-docker@master
       - name: Self-hosted Renovate
         uses: renovatebot/github-action@v39.0.5
         with:
-          configurationFile: default.json
+          # configurationFile: default.json
           token: ${{ secrets.RENOVATE_TOKEN }}

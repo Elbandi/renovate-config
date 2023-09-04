@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: https://github.com/actions/checkout@v3
+      - name: Install sudo
+        run: apt-get update && apt-get install -y sudo
       - uses: docker-practice/actions-setup-docker@master
       - name: Self-hosted Renovate
         uses: renovatebot/github-action@v39.0.5

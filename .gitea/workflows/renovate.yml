@@ -16,6 +16,7 @@ jobs:
       - run: renovate
         env:
           RENOVATE_CONFIG_FILE: "/workspace/gitea/renovate-config/config.js"
+          RENOVATE_TOKEN: ${{ gitea.token }}
       # - name: Install libs
       #   run: apt-get update && apt-get install -y sudo lsb-release systemd docker.io
       # - name: Self-hosted Renovate

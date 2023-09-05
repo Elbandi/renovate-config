@@ -18,7 +18,10 @@ jobs:
           RENOVATE_CONFIG_FILE: "/workspace/gitea/renovate-config/config.js"
           LOG_LEVEL: "debug"
           RENOVATE_CONFIG_MIGRATION: "true" # ensure all repositories receive config migration PRs
-          RENOVATE_TOKEN: ${{ gitea.token }}
+          RENOVATE_TOKEN: ${{ secrets.RENOVATE_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          HUB_DOCKER_COM_USER: ${{ secrets.HUB_DOCKER_COM_USER }}
+          HUB_DOCKER_COM_TOKEN: ${{ secrets.HUB_DOCKER_COM_TOKEN }}
       # - name: Install libs
       #   run: apt-get update && apt-get install -y sudo lsb-release systemd docker.io
       # - name: Self-hosted Renovate

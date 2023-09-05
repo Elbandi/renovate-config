@@ -12,10 +12,10 @@ module.exports = {
     "dryRun": "full", // null to enable actual PR handling
     "binarySource": "install",
     "hostRules": [
-        // {
-        //     "matchHost": "docker.io",
-        //     "username": process.env.HUB_DOCKER_COM_USER,
-        //     "password": process.env.HUB_DOCKER_COM_TOKEN
-        // }
+        {
+            "matchHost": "docker.io",
+            "username": process.env.HUB_DOCKER_COM_USER,
+            "password": process.env.HUB_DOCKER_COM_TOKEN
+        }
     ]
 };

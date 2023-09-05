@@ -1,12 +1,10 @@
 module.exports = {
-    "repositories": [
-        "gitea/helm-chart"
-    ],
     "endpoint": "https://gitea.com/api/v1",
     "gitAuthor": "Renovate Bot <renovate-bot@gitea.com>",
     "platform": "gitea",
     "onboardingConfigFileName": "renovate.json5",
-    "autodiscover": false,
+    "autodiscover": true,
+    "autodiscoverFilter": ["gitea/*"],
     "optimizeForDisabled": true,
     "forkProcessing": "disabled",
     "dryRun": null,

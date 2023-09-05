@@ -9,7 +9,7 @@ module.exports = {
     "autodiscover": false,
     "optimizeForDisabled": true,
     "forkProcessing": "disabled",
-    "dryRun": "full", // null to enable actual PR handling
+    "dryRun": null,
     "binarySource": "install",
     "hostRules": [
         {

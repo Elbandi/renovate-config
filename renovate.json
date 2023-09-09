@@ -2,6 +2,14 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["gitea/renovate-config"],
   "dependencyDashboard": true,
+  "enabledManagers": [
+    "github-actions"
+  ],
+  "github-actions": {
+    "fileMatch": [
+      "^\\.gitea/workflows/renovate\\.yml$"
+    ]
+  },
   "packageRules": [
     {
       "description": "use fix scope for renovate updates",

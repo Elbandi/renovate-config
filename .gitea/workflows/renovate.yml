@@ -10,7 +10,7 @@ on:
 jobs:
   renovate:
     runs-on: ubuntu-latest
-    container: ghcr.io/renovatebot/renovate:36.79.1@sha256:af329e14261bfc17dc31b63376fb45bbf2aea46d6683d3b4fbb567118d6032e4
+    container: ghcr.io/renovatebot/renovate:36.79.1
     steps:
       - uses: https://github.com/actions/checkout@v3
       - run: renovate
@@ -22,10 +22,3 @@ jobs:
           GITHUB_COM_TOKEN: ${{ secrets.GH_TOKEN }}
           HUB_DOCKER_COM_USER: ${{ secrets.HUB_DOCKER_COM_USER }}
           HUB_DOCKER_COM_TOKEN: ${{ secrets.HUB_DOCKER_COM_TOKEN }}
-      # - name: Install libs
-      #   run: apt-get update && apt-get install -y sudo lsb-release systemd docker.io
-      # - name: Self-hosted Renovate
-      #   uses: renovatebot/github-action@v39.0.5
-      #   with:
-      #     # configurationFile: default.json
-      #     token: ${{ secrets.RENOVATE_TOKEN }}

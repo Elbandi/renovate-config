@@ -13,12 +13,12 @@
   "packageRules": [
     {
       "description": "use fix scope for renovate updates",
-      "matchPackageNames": ["renovate/renovate"],
+      "matchPackageNames": ["renovatebot/renovate"],
       "semanticCommitType": "fix"
     },
     {
       "description": "Automerge renovate updates",
-      "matchPackageNames": ["renovate/renovate"],
+      "matchPackageNames": ["renovatebot/renovate"],
       "matchUpdateTypes": ["minor", "patch", "digest"],
       "automerge": true
     }

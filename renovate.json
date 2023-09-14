@@ -5,6 +5,8 @@
   "enabledManagers": [
     "github-actions"
   ],
+  "automerge": true,
+  "ignoreTests": true,
   "packageRules": [
     {
       "description": "use fix scope for renovate updates",

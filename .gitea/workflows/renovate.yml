@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     container: ghcr.io/renovatebot/renovate:37.4.1
     steps:
-      - uses: https://github.com/actions/checkout@v4
+      - uses: actions/checkout@v4
       - run: renovate
         env:
           RENOVATE_CONFIG_FILE: "/workspace/gitea/renovate-config/config.js"

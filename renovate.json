@@ -1,9 +1,8 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["gitea/renovate-config"],
+  "extends": ["elbandi/renovate-config"],
   "dependencyDashboard": true,
   "enabledManagers": [
-    "github-actions"
   ],
   "automerge": true,
   "ignoreTests": true,

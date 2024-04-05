@@ -1,6 +1,6 @@
 module.exports = {
-    "endpoint": "https://gitea.com/api/v1",
-    "gitAuthor": "Renovate Bot <renovate-bot@gitea.com>",
+    "endpoint": "https://git.elbandi.net/api/v1",
+    "gitAuthor": "Renovate Bot <renovate-bot@elbandi.net>",
     "platform": "gitea",
     "onboardingConfigFileName": "renovate.json5",
     "autodiscover": true,

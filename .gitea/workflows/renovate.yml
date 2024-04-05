@@ -15,11 +15,8 @@ jobs:
       - uses: actions/checkout@v4
       - run: renovate
         env:
-          RENOVATE_CONFIG_FILE: "/workspace/gitea/renovate-config/config.js"
+          RENOVATE_CONFIG_FILE: "/workspace/elbandi/renovate-config/config.js"
           LOG_LEVEL: "debug"
           RENOVATE_CONFIG_MIGRATION: "true" # ensure all repositories receive config migration PRs
           RENOVATE_TOKEN: ${{ secrets.RENOVATE_TOKEN }}
-          GITHUB_COM_TOKEN: ${{ secrets.GH_TOKEN }}
-          HUB_DOCKER_COM_USER: ${{ secrets.HUB_DOCKER_COM_USER }}
-          HUB_DOCKER_COM_TOKEN: ${{ secrets.HUB_DOCKER_COM_TOKEN }}
 

@@ -12,6 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     container: ghcr.io/renovatebot/renovate:37.279.3
     steps:
+      - name: Container preparation
+        run: |
+          echo "${{ secrets.ELBANDI_CA }}" >/usr/local/share/ca-certificates/elbandinetca.crt
+          update-ca-certificates
       - uses: actions/checkout@v4
       - run: renovate
         env:

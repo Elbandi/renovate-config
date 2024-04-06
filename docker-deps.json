@@ -1,0 +1,13 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "dockerfile": {
+    "enabled": true
+  },
+  "packageRules": [
+    {
+      "groupName": "docker images",
+      "matchDatasources": ["docker"],
+      "versioning": "semver"
+    }
+  ]
+}

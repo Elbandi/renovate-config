@@ -5,7 +5,7 @@ on:
     - cron: "@daily"
   push:
     branches:
-      - main
+      - master
 
 jobs:
   renovate:

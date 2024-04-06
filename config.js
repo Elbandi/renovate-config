@@ -4,7 +4,7 @@ module.exports = {
     "platform": "gitea",
     "onboardingConfigFileName": "renovate.json5",
     "autodiscover": true,
-    "autodiscoverFilter": ["gitea/*"],
+    "autodiscoverFilter": ["elbandi/*"],
     "optimizeForDisabled": true,
     "forkProcessing": "disabled",
     "dryRun": null,

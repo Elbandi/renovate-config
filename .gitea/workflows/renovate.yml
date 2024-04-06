@@ -13,7 +13,8 @@ jobs:
     container: dockerhub.elbandi.net/renovate:latest
     steps:
       - uses: actions/checkout@v4
-      - run: renovate
+      - name: Run Renovate
+        run: renovate
         env:
           RENOVATE_CONFIG_FILE: "/workspace/elbandi/renovate-config/config.js"
           LOG_LEVEL: "debug"

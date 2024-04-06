@@ -20,4 +20,5 @@ jobs:
           LOG_LEVEL: "debug"
           RENOVATE_CONFIG_MIGRATION: "true" # ensure all repositories receive config migration PRs
           RENOVATE_TOKEN: ${{ secrets.RENOVATE_TOKEN }}
+          GITHUB_COM_TOKEN: ${{ secrets.GH_TOKEN }}
 

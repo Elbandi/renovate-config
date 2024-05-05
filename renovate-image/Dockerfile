@@ -1,4 +1,4 @@
-FROM ghcr.io/renovatebot/renovate:37.340.8
+FROM ghcr.io/renovatebot/renovate:37.342.1
 
 USER root
 

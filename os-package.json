@@ -1,0 +1,17 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "description": "Search packages in repology installed in containers for distribution <code>{{arg0}}</code>",
+    "customManagers": [
+      {
+        "description": "Update packages set in Dockerfiles",
+        "fileMatch": ["(^|/)Dockerfile.*$"],
+        "matchStringsStrategy": "any",
+        "matchStrings": [
+        "#\\srenovate:\\sdatasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?( extractVersion=(?<extractVersion>.*?))?\\s(ENV|ARG) .*?_VERSION=\"(?<currentValue>.*)\"\\s"
+        ],
+        "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}loose{{/if}}",
+        "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}repology{{/if}}",
+        "depNameTemplate": "{{arg0}}/{{package}}"
+      }
+    ]
+}

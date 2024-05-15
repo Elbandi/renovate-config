@@ -7,11 +7,10 @@
         "fileMatch": ["(^|/)Dockerfile.*$"],
         "matchStringsStrategy": "any",
         "matchStrings": [
-        "#\\srenovate:\\sdatasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?( extractVersion=(?<extractVersion>.*?))?\\s(ENV|ARG) .*?_VERSION=\"(?<currentValue>.*)\"\\s"
+        "#\\srenovate:\\sdatasource=(?<datasource>.*?) depName=(?<depName>{{arg0}}/.*?)( versioning=(?<versioning>.*?))?( extractVersion=(?<extractVersion>.*?))?\\s(ENV|ARG) .*?_VERSION=\"(?<currentValue>.*)\"\\s"
         ],
         "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}loose{{/if}}",
-        "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}repology{{/if}}",
-        "depNameTemplate": "{{arg0}}/{{package}}"
+        "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{else}}repology{{/if}}"
       }
     ]
 }

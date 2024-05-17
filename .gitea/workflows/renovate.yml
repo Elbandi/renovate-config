@@ -10,7 +10,7 @@ on:
 jobs:
   renovate:
     runs-on: ubuntu-latest
-    container: dockerhub.elbandi.net/renovate:latest
+    container: ghcr.io/renovatebot/renovate:latest
     steps:
       - uses: actions/checkout@v4
       - name: Run Renovate

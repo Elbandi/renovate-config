@@ -2,7 +2,7 @@ module.exports = {
     "endpoint": "https://git.elbandi.net/api/v1",
     "gitAuthor": "Renovate Bot <renovate-bot@elbandi.net>",
     "platform": "gitea",
-    "onboardingConfigFileName": "renovate.json5",
+    "onboardingConfigFileName": ".gitea/renovate.json5",
     "autodiscover": true,
     "autodiscoverFilter": ["elbandi/*"],
     "optimizeForDisabled": true,

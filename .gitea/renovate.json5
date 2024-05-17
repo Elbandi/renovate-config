@@ -1,0 +1,9 @@
+{
+  "packageRules": [
+    {
+      "matchDatasources": ["docker"],
+      "matchFileNames": ["renovate-image/Dockerfile"],
+      "enabled": false
+    }
+  ]
+}

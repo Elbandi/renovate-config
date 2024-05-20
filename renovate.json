@@ -11,6 +11,11 @@
   "ignoreTests": true,
   "packageRules": [
     {
+      "matchDatasources": ["docker"],
+      "matchFileNames": ["renovate-image/Dockerfile"],
+      "enabled": false
+    },
+    {
       "description": "use fix scope for renovate updates",
       "matchPackageNames": ["renovatebot/renovate"],
       "semanticCommitType": "fix"

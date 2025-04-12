@@ -7,7 +7,7 @@
         "fileMatch": ["(^|/)Dockerfile.*$"],
         "matchStringsStrategy": "any",
         "matchStrings": [
-          "#\\s*renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s(ENV|ARG) .*?_VERSION (?<currentValue>.*)\\s"
+          "#\\s*renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)(?: (?:lookupName|packageName)=(?<packageName>[^\\s]+?))( versioning=(?<versioning>.*?))?\\s(ENV|ARG) .*?_VERSION (?<currentValue>.*)\\s"
         ],
         "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}maven{{/if}}",
         "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{/if}}"

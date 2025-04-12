@@ -1,0 +1,24 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "description": "Search packages in jetbrains installed in containers for product <code>{{arg0}}</code>",
+    "customManagers": [
+      {
+        "description": "Update jetbrains set in Dockerfiles",
+        "fileMatch": ["(^|/)Dockerfile.*$"],
+        "matchStringsStrategy": "any",
+        "matchStrings": [
+          "#\\s*renovate: datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s(ENV|ARG) .*?_VERSION (?<currentValue>.*)\\s"
+        ],
+        "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}maven{{/if}}",
+        "datasourceTemplate": "{{#if datasource}}{{{datasource}}}{{/if}}"
+      }
+    ],
+    "customDatasources": {
+      "jetbrainsProduct": {
+        "defaultRegistryUrlTemplate": "https://data.services.jetbrains.com/products/releases?code={{arg0}}&type=release",
+        "transformTemplates": [
+          "{ \"releases\": $.\"{{{packageName}}}\".{ \"version\": version, \"releaseTimestamp\": date, \"changelogUrl\": notesLink ? notesLink : undefined} }",
+        ],
+      }
+    }
+}

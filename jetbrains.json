@@ -15,7 +15,7 @@
     ],
     "customDatasources": {
       "jetbrainsProduct": {
-        "defaultRegistryUrlTemplate": "https://data.services.jetbrains.com/products/releases?code={{arg0}}&type=release",
+        "defaultRegistryUrlTemplate": "https://data.services.jetbrains.com/products/releases?code=CL,DG,GO,IIC,IIU,PS,PCP,RD,RM,WS&type=release",
         "transformTemplates": [
           "{ \"releases\": $.\"{{{packageName}}}\".{ \"version\": version, \"releaseTimestamp\": date, \"changelogUrl\": notesLink ? notesLink : undefined} }",
         ],
